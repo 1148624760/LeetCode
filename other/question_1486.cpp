@@ -1,13 +1,12 @@
-#include "head.h"
 
 class Solution {
 public:
     int xorOperation(int n, int start) {
-        int res = 0;
-        for (int i = 0; i < n; ++i) {
-            res ^= start;
-            start += 2;
+        int ret = 0;
+        for (int i = 0; i < n; i++) {
+            ret ^= start + 2 * i;
         }
-        return res;
+
+        return ret;
     }
 };
